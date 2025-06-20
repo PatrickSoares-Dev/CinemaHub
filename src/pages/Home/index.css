@@ -17,3 +17,24 @@
   gap: 1.5rem;
   padding: 1rem 0;
 }
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.loader,
+.empty,
+.total {
+  text-align: center;
+  margin: 0.5rem 0;
+}
