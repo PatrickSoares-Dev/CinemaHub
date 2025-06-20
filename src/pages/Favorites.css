@@ -1,0 +1,20 @@
+.favorites {
+  padding: 1rem;
+}
+
+.favorites form {
+  margin-bottom: 1rem;
+}
+
+.favorites input {
+  padding: 0.25rem;
+  margin-right: 0.5rem;
+}
+
+.favorites button {
+  padding: 0.25rem 0.5rem;
+}
+
+.error {
+  color: red;
+}
