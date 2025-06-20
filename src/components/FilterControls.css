@@ -1,0 +1,15 @@
+.filter-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  width: 100%;
+}
+
+.filter-form input {
+  flex: 1;
+  min-width: 150px;
+  background-color: #2a2a2a;
+  border: 1px solid #555;
+  color: #eee;
+}

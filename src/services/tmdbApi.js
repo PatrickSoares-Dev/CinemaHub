@@ -5,8 +5,7 @@ const BASE_URL = 'https://api.themoviedb.org/3';
 
 const api = axios.create({
   baseURL: BASE_URL,
-  params: { api_key: API_KEY },
-  language: 'pt-BR'
+  params: { api_key: API_KEY, language: 'pt-BR' }
 });
 
 const handleError = (error, defaultMessage) => {
@@ -35,5 +34,49 @@ export const getMovieDetails = async (id) => {
     return data;
   } catch (error) {
     throw handleError(error, 'Erro ao buscar detalhes do filme:');
+  }
+};
+
+export const searchMovies = async (query, page = 1) => {
+  try {
+    const { data } = await api.get('/search/movie', {
+      params: { query, page }
+    });
+    if (!data || !data.results) {
+      throw new Error('Resposta vazia');
+    }
+    return { results: data.results, total: data.total_results };
+  } catch (error) {
+    throw handleError(error, 'Erro ao buscar filmes:');
+  }
+};
+
+export const discoverMovies = async ({ page = 1, genre = '', sortBy = 'popularity.desc' }) => {
+  try {
+    const { data } = await api.get('/discover/movie', {
+      params: {
+        page,
+        with_genres: genre || undefined,
+        sort_by: sortBy
+      }
+    });
+    if (!data || !data.results) {
+      throw new Error('Resposta vazia');
+    }
+    return { results: data.results, total: data.total_results };
+  } catch (error) {
+    throw handleError(error, 'Erro ao buscar filmes:');
+  }
+};
+
+export const getGenres = async () => {
+  try {
+    const { data } = await api.get('/genre/movie/list');
+    if (!data || !data.genres) {
+      throw new Error('Resposta vazia');
+    }
+    return data.genres;
+  } catch (error) {
+    throw handleError(error, 'Erro ao buscar gêneros:');
   }
 };
