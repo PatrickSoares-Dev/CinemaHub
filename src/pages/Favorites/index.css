@@ -1,10 +1,11 @@
 .favorites {
   max-width: 600px;
   margin: 2rem auto;
-  background-color: white;
+  background-color: #1e1e1e;
   padding: 1rem 2rem;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  color: #eee;
 }
 
 .favorites form {
@@ -26,7 +27,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #333;
   padding: 0.5rem 0;
 }
 
