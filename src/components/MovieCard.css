@@ -1,13 +1,13 @@
 .movie-card {
-  border: 1px solid #ddd;
+  border: 1px solid #444;
   border-radius: 12px;
   overflow: hidden;
   text-align: center;
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: #2a2a2a;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   padding: 1rem;
-  width: 220px; 
+  width: 220px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -15,7 +15,7 @@
 
 .movie-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
 }
 
 .movie-card img {
@@ -27,20 +27,20 @@
 .movie-card h3 {
   font-size: 1.1rem;
   margin: 0.8rem 0;
-  color: #333;
+  color: #f8d30e;
 }
 
 .movie-card a {
   display: inline-block;
   margin-top: auto;
   padding: 0.5rem 1rem;
-  background-color: #007bff;
-  color: white;
+  background-color: #f8d30e;
+  color: #000;
   border-radius: 6px;
   transition: background-color 0.2s ease;
 }
 
 .movie-card a:hover {
-  background-color: #0056b3;
+  background-color: #ffd84d;
   text-decoration: none;
 }

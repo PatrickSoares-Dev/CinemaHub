@@ -1,0 +1,12 @@
+.filter-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filter-form input,
+.filter-form select {
+  background-color: #2a2a2a;
+  border: 1px solid #555;
+  color: #eee;
+}
