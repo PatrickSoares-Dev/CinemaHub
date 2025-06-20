@@ -1,40 +1,136 @@
-.favorites {
-  max-width: 600px;
+.favorites-page {
+  max-width: 1200px;
   margin: 2rem auto;
-  background-color: #1e1e1e;
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  color: #eee;
+  padding: 1rem;
+}
+
+.favorites-page h2 {
+  text-align: center;
+  color: #f7c600;
+  margin-bottom: 1.5rem;
+}
+
+.favorites-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.favorites-filters input,
+.favorites-filters select {
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+  border: 1px solid #444;
+  background-color: #2a2a2a;
   color: #eee;
 }
 
-.favorites form {
+.favorites-filters input::placeholder {
+  color: #888;
+}
+
+.favorite-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.favorite-card {
+  background-color: #1e1e1e;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
   display: flex;
-  margin-bottom: 1rem;
-}
-
-.favorites input {
-  flex: 1;
-  margin-right: 0.5rem;
-}
-
-.favorites ul {
-  list-style: none;
-  padding: 0;
-}
-
-.favorites li {
-  display: flex;
+  flex-direction: column;
   justify-content: space-between;
+}
+
+.favorite-poster {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+}
+
+.favorite-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.favorite-card p {
+  margin: 0.3rem 0;
+}
+
+.favorite-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.details-button,
+.delete-button {
+  display: inline-flex;
   align-items: center;
-  border-bottom: 1px solid #333;
-  padding: 0.5rem 0;
+  gap: 0.4rem;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
 }
 
-.favorites li button {
-  background-color: #dc3545;
+.details-button {
+  background-color: #2c3e50;
+  color: #f7c600;
 }
 
-.favorites li button:hover {
-  background-color: #c82333;
+.details-button:hover {
+  background-color: #34495e;
+}
+
+.delete-button {
+  background-color: #c0392b;
+  color: #fff;
+}
+
+.delete-button:hover {
+  background-color: #e74c3c;
+}
+
+.empty-message {
+  text-align: center;
+  color: #aaa;
+  margin-top: 2rem;
+}
+
+.pagination {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.pagination button {
+  background-color: #333;
+  color: #eee;
+  border: none;
+  padding: 0.4rem 0.7rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background-color: #f7c600;
+  color: #222;
+  font-weight: bold;
+}
+
+.pagination button:hover {
+  background-color: #555;
 }

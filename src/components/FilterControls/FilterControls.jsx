@@ -1,5 +1,5 @@
 import './FilterControls.css';
-import DropdownMenu from './DropdownMenu';
+import DropdownMenu from '../DropdownMenu/DropdownMenu';
 
 const FilterControls = ({
   searchInput,

@@ -1,24 +1,195 @@
-.details {
-  max-width: 800px;
+.movie-details {
+  max-width: 1200px;
   margin: 2rem auto;
-  background-color: #1e1e1e;
-  padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  overflow: hidden;
   color: #eee;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
 }
 
-.details img {
+.details-banner {
   width: 100%;
-  max-width: 300px;
+  height: 350px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.details-banner-content {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  color: #fff;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.details-banner-content h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.details-banner-content p {
+  margin: 0.4rem 0;
+  font-size: 1rem;
+}
+
+/* ✅ GRUPO DE BOTÕES NO TOPO (Banner) */
+.top-button-group {
+  display: flex;
+  gap: 0.8rem;           /* Espaço entre os botões */
+  margin-top: 1rem;      /* Espaço acima dos botões */
+  flex-wrap: wrap;       /* Quebra se for necessário em telas pequenas */
+}
+
+.button.small-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.back-button {
+  background-color: #333;
+  color: #f7c600;
+}
+
+.back-button:hover {
+  background-color: #444;
+}
+
+.favorite-button {
+  background-color: #c0392b;
+  color: #fff;
+}
+
+.favorite-button:hover {
+  background-color: #e74c3c;
+}
+
+.site-button {
+  background-color: #2c3e50;
+  color: #f7c600;
+}
+
+.site-button:hover {
+  background-color: #34495e;
+}
+
+/* ✅ BLOCO DE CONTEÚDO */
+.details-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
   border-radius: 8px;
-  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #1e1e1e;
 }
 
-.details h2 {
-  margin-bottom: 1rem;
+.details-poster {
+  width: 250px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
-.details p {
+.details-info {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.details-info p {
+  margin: 0;
   line-height: 1.5;
+}
+
+.details-info-section {
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.info-block {
+  background-color: #1a1a1a;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.description-block {
+  background-color: #222;
+  color: #eee;
+  font-size: 1rem;
+  line-height: 1.6;
+  border-left: 4px solid #f7c600;
+}
+
+.site-block {
+  background-color: #2a2a2a;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.site-block a {
+  text-decoration: none;
+  color: #f7c600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+}
+
+.site-block a:hover {
+  text-decoration: none;
+  color: #ffd84d;
+}
+
+/* ✅ GRUPO DE BOTÕES NA PARTE DE BAIXO (SE EXISTIR) */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.details-info a {
+  color: #f7c600;
+}
+
+.details-info a:hover {
+  text-decoration: none;
+}
+
+.error,
+.loading {
+  text-align: center;
+  margin-top: 2rem;
+  color: #f7c600;
+}
+
+.tagline {
+  font-style: italic;
+  color: #ccc;
+  margin-top: 0.5rem;
 }

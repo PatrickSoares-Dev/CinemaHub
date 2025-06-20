@@ -35,6 +35,11 @@ button {
   transition: background-color 0.2s ease-in-out;
 }
 
+.favorite-button.active {
+  background-color: #c0392b;
+  color: #fff;
+}
+
 button:hover {
   background-color: #ffd84d;
 }

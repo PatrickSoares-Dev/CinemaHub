@@ -109,3 +109,24 @@
   margin: 0.5rem 0;
   color: #eee;
 }
+
+.filter-bar select {
+  background-color: #2a2a2a;
+  border: 1px solid #555;
+  color: #eee;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.filter-bar select:hover {
+  border-color: #f8d30e;
+}
+
+.filter-bar select:focus {
+  outline: none;
+  border-color: #f8d30e;
+  box-shadow: 0 0 0 2px rgba(248, 211, 14, 0.3);
+}

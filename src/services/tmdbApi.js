@@ -80,3 +80,13 @@ export const getGenres = async () => {
     throw handleError(error, 'Erro ao buscar gêneros:');
   }
 };
+
+export const getMoviesByIds = async (ids) => {
+  try {
+    const requests = ids.map((id) => api.get(`/movie/${id}`));
+    const responses = await Promise.all(requests);
+    return responses.map((r) => r.data);
+  } catch (error) {
+    throw handleError(error, 'Erro ao buscar filmes favoritos:');
+  }
+};

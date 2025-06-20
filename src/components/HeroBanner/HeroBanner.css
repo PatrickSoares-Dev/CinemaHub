@@ -1,0 +1,73 @@
+.hero-banner {
+  height: 380px;
+  background-size: cover;
+  background-position: center;
+  color: #f8d30e;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+  position: relative;
+  overflow: hidden;
+  transition: background-image 1s ease-in-out;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero-content h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-meta {
+  font-size: 1rem;
+  color: #f8d30e;
+  margin-bottom: 0.5rem;
+}
+
+.hero-meta .rating {
+  font-weight: bold;
+}
+
+.hero-meta .genres {
+  color: #ddd;
+  margin-left: 0.5rem;
+}
+
+.hero-overview {
+  color: #ddd;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.hero-buttons button {
+  background-color: #f8d30e;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  color: #121212;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.hero-buttons button:hover {
+  background-color: #ffd84d;
+}
