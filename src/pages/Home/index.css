@@ -1,3 +1,71 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  background-color: #121212; /* Mantendo o tom mais moderno */
+  padding: 1.5rem 2rem;
+  color: #f8d30e;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.header h1 {
+  margin: 0;
+  color: #f7c600;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.header nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.header nav a {
+  color: #eee;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.header nav a:hover {
+  color: #f7c600;
+  background-color: rgba(247, 198, 0, 0.1);
+}
+
+.filter-bar {
+  width: 100%;
+  background-color: #2a2a2a;
+  padding: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+  .header-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header nav {
+    margin-top: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
 .home {
   padding: 1rem;
 }
@@ -17,6 +85,14 @@
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 1.5rem;
   padding: 1rem 0;
+}
+
+/* Mantendo o bloco .controls vindo do main para formulário de filtros */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .pagination {

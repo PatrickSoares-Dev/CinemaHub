@@ -19,6 +19,7 @@ const FilterControls = ({
       placeholder="Buscar filme"
     />
     <button type="submit">Buscar</button>
+
     <DropdownMenu
       label="Gênero"
       value={genre}
@@ -28,6 +29,7 @@ const FilterControls = ({
         ...genres.map((g) => ({ value: g.id, label: g.name }))
       ]}
     />
+
     <DropdownMenu
       label="Ordenar"
       value={sortBy}

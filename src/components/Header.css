@@ -1,13 +1,13 @@
 .header {
   display: flex;
   flex-direction: column;
-  background-color: #121212;
-  padding: 1.5rem 2rem;
+  background-color: #121212; /* Mantendo o tom mais moderno */
+  padding: 1.5rem 2rem; /* Mantendo o espaçamento maior */
   color: #f8d30e;
   position: sticky;
   top: 0;
   z-index: 10;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Mantendo a sombra para dar profundidade */
 }
 
 .header-top {
@@ -19,10 +19,15 @@
 
 .header h1 {
   margin: 0;
-  color: #f7c600;
+  color: #f7c600; /* Tom de amarelo mais vivo */
   font-size: 2.2rem;
   font-weight: 700;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Sombra discreta para o texto */
+}
+
+.header nav {
+  display: flex;
+  gap: 1rem; /* Melhor espaçamento entre os links */
 }
 
 .header nav a {
@@ -30,11 +35,6 @@
   font-weight: 600;
   padding: 0.5rem 0.75rem;
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-}
-
-.header nav {
-  display: flex;
-  gap: 1rem;
 }
 
 .header nav a:hover {
