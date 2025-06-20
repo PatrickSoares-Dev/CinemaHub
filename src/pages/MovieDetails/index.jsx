@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getMovieDetails } from '../services/tmdbApi';
-import './MovieDetails.css';
+import { getMovieDetails } from '../../services/tmdbApi';
+import './index.css';
 
 const IMG_BASE = 'https://image.tmdb.org/t/p/w300';
 

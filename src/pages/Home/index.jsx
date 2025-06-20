@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { getPopularMovies } from '../services/tmdbApi';
-import MovieCard from '../components/MovieCard';
-import './Home.css';
+import { getPopularMovies } from '../../services/tmdbApi';
+import MovieCard from '../../components/MovieCard';
+import './index.css';
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
