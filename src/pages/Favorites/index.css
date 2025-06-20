@@ -1,20 +1,39 @@
 .favorites {
-  padding: 1rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .favorites form {
+  display: flex;
   margin-bottom: 1rem;
 }
 
 .favorites input {
-  padding: 0.25rem;
+  flex: 1;
   margin-right: 0.5rem;
 }
 
-.favorites button {
-  padding: 0.25rem 0.5rem;
+.favorites ul {
+  list-style: none;
+  padding: 0;
 }
 
-.error {
-  color: red;
+.favorites li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 0.5rem 0;
+}
+
+.favorites li button {
+  background-color: #dc3545;
+}
+
+.favorites li button:hover {
+  background-color: #c82333;
 }

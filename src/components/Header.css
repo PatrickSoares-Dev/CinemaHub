@@ -2,17 +2,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #333;
-  padding: 1rem;
-  color: #fff;
+  background-color: #343a40;
+  padding: 1rem 2rem;
+  color: white;
 }
 
-.header a {
-  color: #fff;
+.header h1 {
+  margin: 0;
+}
+
+.header nav a {
   margin-right: 1rem;
-  text-decoration: none;
+  color: #f8f9fa;
+  font-weight: bold;
 }
 
-.header a:last-child {
-  margin-right: 0;
+.header nav a:hover {
+  color: #17a2b8;
 }
