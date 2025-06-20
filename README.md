@@ -49,7 +49,7 @@ Para utilizar a API você precisa de uma chave gratuita obtida após cadastro no
 - `*` – página de erro (404)
 
 ## Link do Projeto
-Todo o código está disponível em [https://github.com/usuario/CinemaHub](https://github.com/usuario/CinemaHub).
+Todo o código está disponível em [https://github.com/PatrickSoares-Dev/CinemaHub](https://github.com/PatrickSoares-Dev/CinemaHub).
 
 ## Como contribuir
 1. Realize um fork do repositório.
