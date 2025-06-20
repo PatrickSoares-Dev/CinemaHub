@@ -87,6 +87,7 @@
   padding: 1rem 0;
 }
 
+/* Mantendo o bloco .controls vindo do main para formulário de filtros */
 .controls {
   display: flex;
   flex-wrap: wrap;

@@ -1,4 +1,5 @@
 import './FilterControls.css';
+import DropdownMenu from './DropdownMenu';
 
 const FilterControls = ({
   searchInput,
@@ -18,17 +19,27 @@ const FilterControls = ({
       placeholder="Buscar filme"
     />
     <button type="submit">Buscar</button>
-    <select value={genre} onChange={(e) => onGenreChange(e.target.value)}>
-      <option value="">Todos os Gêneros</option>
-      {genres.map((g) => (
-        <option key={g.id} value={g.id}>{g.name}</option>
-      ))}
-    </select>
-    <select value={sortBy} onChange={(e) => onSortByChange(e.target.value)}>
-      <option value="popularity.desc">Mais populares</option>
-      <option value="release_date.desc">Lançamentos</option>
-      <option value="vote_average.desc">Melhores avaliados</option>
-    </select>
+
+    <DropdownMenu
+      label="Gênero"
+      value={genre}
+      onSelect={onGenreChange}
+      options={[
+        { value: '', label: 'Todos os Gêneros' },
+        ...genres.map((g) => ({ value: g.id, label: g.name }))
+      ]}
+    />
+
+    <DropdownMenu
+      label="Ordenar"
+      value={sortBy}
+      onSelect={onSortByChange}
+      options={[
+        { value: 'popularity.desc', label: 'Mais populares' },
+        { value: 'release_date.desc', label: 'Lançamentos' },
+        { value: 'vote_average.desc', label: 'Melhores avaliados' }
+      ]}
+    />
   </form>
 );
 

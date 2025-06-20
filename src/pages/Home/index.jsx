@@ -7,18 +7,13 @@ import {
 import MovieCard from '../../components/MovieCard';
 import './index.css';
 
-const Home = () => {
+const Home = ({ search, genre, sortBy }) => {
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
-
-  const [search, setSearch] = useState('');
-  const [searchInput, setSearchInput] = useState('');
-  const [genres, setGenres] = useState([]);
-  const [genre, setGenre] = useState('');
-  const [sortBy, setSortBy] = useState('popularity.desc');
   const [page, setPage] = useState(1);
   const [total, setTotal] = useState(0);
+  const [genres, setGenres] = useState([]);
 
   useEffect(() => {
     const loadGenres = async () => {
@@ -31,6 +26,10 @@ const Home = () => {
     };
     loadGenres();
   }, []);
+
+  useEffect(() => {
+    setPage(1);
+  }, [search, genre, sortBy]);
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -54,38 +53,9 @@ const Home = () => {
     fetchMovies();
   }, [search, genre, sortBy, page]);
 
-  const handleSearch = (e) => {
-    e.preventDefault();
-    setPage(1);
-    setSearch(searchInput.trim());
-  };
-
   return (
     <div className="home">
       <h2>Filmes Populares</h2>
-
-      <form className="controls" onSubmit={handleSearch}>
-        <input
-          type="text"
-          value={searchInput}
-          onChange={(e) => setSearchInput(e.target.value)}
-          placeholder="Buscar filme"
-        />
-        <button type="submit">Buscar</button>
-
-        <select value={genre} onChange={(e) => { setGenre(e.target.value); setPage(1); }}>
-          <option value="">Todos os Gêneros</option>
-          {genres.map((g) => (
-            <option key={g.id} value={g.id}>{g.name}</option>
-          ))}
-        </select>
-
-        <select value={sortBy} onChange={(e) => { setSortBy(e.target.value); setPage(1); }}>
-          <option value="popularity.desc">Mais populares</option>
-          <option value="release_date.desc">Lançamentos</option>
-          <option value="vote_average.desc">Melhores avaliados</option>
-        </select>
-      </form>
 
       {error && <p className="error">{error}</p>}
       {loading && <p className="loader">🔄 Carregando filmes...</p>}
