@@ -67,14 +67,14 @@ const Home = () => {
 
   return (
     <div className="home">
-      {!loading && movies.length > 0 && (
+      {/* {!loading && movies.length > 0 && (
         <HeroBanner
           movies={movies.slice(0, 5)}
           genres={genres}
           onAddFavorite={(m) => console.log('Favorito:', m)}
           onViewDetails={(m) => navigate(`/movie/${m.id}`)}  // ✅ Aqui a correção
         />
-      )}
+      )} */}
 
       {/* Filtros simples */}
       <form onSubmit={handleSubmit} className="filter-bar">
